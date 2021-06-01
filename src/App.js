@@ -1,11 +1,11 @@
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>BuildIt Weather App 5 day Forecast</h2>
-      </header>
+      <Header />
+      <Card />
     </div>
   );
 }
