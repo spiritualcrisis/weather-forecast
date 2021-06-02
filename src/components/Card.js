@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const iconLink = "http://openweathermap.org/img/wn/";
+const iconLink = "https://openweathermap.org/img/wn/";
 const days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
 const monthNames = [
   "January",
