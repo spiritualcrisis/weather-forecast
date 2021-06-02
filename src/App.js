@@ -32,7 +32,7 @@ function App() {
   }
   return (
     <div className="flex justify-center pt-16">
-      <div className="font-sans w-5/12 rounded-lg overflow-hidden px-4 bg-yellow-300 shadow-lg mt-12">
+      <div className="font-sans flex-col md:flex-row rounded-lg overflow-hidden px-4 bg-yellow-300 shadow-lg mt-12">
         <Header weatherData={weatherData} oneDayData={fiveDaysData[0]} />
 
         <Card data={fiveDaysData} />
