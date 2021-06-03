@@ -6,7 +6,10 @@ const iconLink = "https://openweathermap.org/img/wn/";
 function Header({ oneDayData, weatherData }) {
   return (
     <div>
-      <div className="spacing-4 text-center text-5xl font-semibold px-8 py-8">
+      <div
+        id="weather-header"
+        className="spacing-4 text-center text-5xl font-semibold px-8 py-8"
+      >
         Weather Forecast
       </div>
       <div className="current-weather flex items-center justify-center px-6 py-8">
