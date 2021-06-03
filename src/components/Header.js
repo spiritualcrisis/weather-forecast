@@ -13,7 +13,7 @@ function Header({ oneDayData, weatherData }) {
         Weather Forecast
       </div>
       <div className="current-weather flex items-center justify-center px-6 py-8">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex  items-center">
           <div>
             <div className="text-6xl font-semibold">
               {Math.round(oneDayData.main.temp)}
