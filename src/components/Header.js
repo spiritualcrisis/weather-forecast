@@ -12,32 +12,31 @@ function Header({ oneDayData, weatherData }) {
       >
         Weather Forecast
       </div>
-      <div className="current-weather flex items-center justify-center px-6 py-8">
-        <div className="flex  items-center">
+      {/* <div className="current-weather flex items-center justify-center px-6 py-8"> */}
+      <div className="flex px-6 py-8 ">
+        <div>
+          <div className="text-6xl font-semibold">
+            {Math.round(oneDayData.main.temp)}
+          </div>
+          <div>Feels Like : {Math.round(oneDayData.main.feels_like)} °C</div>
+        </div>
+        <div className="mx-10">
           <div>
-            <div className="text-6xl font-semibold">
-              {Math.round(oneDayData.main.temp)}
-            </div>
-            <div>Feels Like : {Math.round(oneDayData.main.feels_like)} °C</div>
+            <span>{weatherData && weatherData.city}</span>
+            <br />
+            <span>{weatherData && weatherData.country}</span>
           </div>
-          <div className="mx-5">
-            <div>
-              <span>{weatherData && weatherData.city}</span>
-              <br />
-              <span>{weatherData && weatherData.country}</span>
-            </div>
-            <div className="font-semibold">
-              {oneDayData.weather[0].description}
-            </div>
+          <div className="font-semibold">
+            {oneDayData.weather[0].description}
           </div>
-          <div>
-            <img
-              src={iconLink + oneDayData.weather[0].icon + ".png"}
-              width="90px"
-              height="90px"
-              alt="weather icon"
-            />
-          </div>
+        </div>
+        <div>
+          <img
+            src={iconLink + oneDayData.weather[0].icon + ".png"}
+            width="90px"
+            height="90px"
+            alt="weather icon"
+          />
         </div>
       </div>
     </div>

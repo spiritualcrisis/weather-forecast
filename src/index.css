@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.weather-icons {
+  min-width: 50px;
+  width: 50px;
+}

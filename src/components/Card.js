@@ -23,19 +23,17 @@ function Card({ data }) {
       {data.map((item) => {
         return (
           <div className="flex items-center" key={item.dt_txt}>
-            <div className="w-1/3 text-lg text-white-200">
+            <div className="w-1/3 text-md text-white-200">
               {days[new Date(item.dt_txt).getDay()]}
               <br />
-              {monthNames[new Date(item.dt_txt.split(" ")[0]).getMonth()] +
-                " " +
-                item.dt_txt.split(" ")[0].split("-")[0]}
+              {item.dt_txt.split(" ")[0].split("-")[2] +
+                "" +
+                monthNames[new Date(item.dt_txt.split(" ")[0]).getMonth()]}
             </div>
             <div className="w-1/3  flex items-center">
-              <div>
+              <div className="weather-icons">
                 <img
                   src={iconLink + item.weather[0].icon + ".png"}
-                  width="70px"
-                  height="70px"
                   alt="weather icon"
                 />
               </div>
